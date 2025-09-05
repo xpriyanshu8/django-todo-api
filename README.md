@@ -1,73 +1,36 @@
 
 
-# 📝 Task Manager API (Django REST Framework)
+# Fullstack To-Do App (Django + React)
 
-## 🚀 Overview
-Ye ek simple Task Manager API hai jo Django REST Framework (DRF) se banayi gayi hai.  
-Isme user authentication (JWT) ke saath tasks create, read, update aur delete karne ki facility hai.  
+## 🚀 Project Overview
+A fullstack To-Do application built with Django REST Framework (backend) and React (frontend).  
+Features:
+- JWT Authentication (Login/Logout)
+- CRUD (Create, Read, Update, Delete) tasks
+- Filtering, Searching, Sorting
+- Pagination
+- CORS enabled
+- Local deployment on Windows
 
----
+## 🛠 Tech Stack
+- Backend: Django, Django REST Framework
+- Frontend: React, Axios
+- Database: SQLite (local)
+- Auth: JWT (SimpleJWT)
 
-## ⚙️ Features
-- User Registration & JWT Authentication
-- Create, Read, Update, Delete (CRUD) tasks
-- Task ownership (har user ke apne tasks)
-- Search tasks by title
-- API browsable interface (DRF)
+## ⚡ Features
+- Add new tasks
+- Mark complete/incomplete
+- Delete tasks
+- Search & filter tasks
+- Pagination for large lists
+- User authentication with JWT
 
----
-
-## 📦 Installation
+## 📂 Project Setup
+### Backend (Django)
 bash
-git clone <repo-url>
-cd backend/database_integration
-python -m venv venv
-venv\Scripts\activate   # (Windows)
+cd backend
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-🔑 Authentication
-JWT token generate karne ke liye:
 
-bash
-Copy code
-POST /api/token/
-{
-  "username": "your_username",
-  "password": "your_password"
-}
-Refresh token:
-
-swift
-Copy code
-POST /api/token/refresh/
-📌 API Endpoints
-Auth
-POST /register/ → Register user
-
-POST /api/token/ → Get JWT token
-
-POST /api/token/refresh/ → Refresh token
-
-Tasks
-GET /tasks/ → List all tasks (Auth required)
-
-POST /tasks/ → Create new task
-
-PUT /tasks/<id>/ → Update task
-
-DELETE /tasks/<id>/ → Delete task
-
-GET /tasks/?search=<keyword> → Search tasks by title
-
-🛠️ Tech Stack
-Python 3.12
-
-Django 5.x
-
-Django REST Framework
-
-SimpleJWT
-
-Author
-Priyanshu
