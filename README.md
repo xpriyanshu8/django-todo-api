@@ -1,36 +1,30 @@
 
 
-# Fullstack To-Do App (Django + React)
+# 📝 Task Manager API (Django REST Framework)
 
-## 🚀 Project Overview
-A fullstack To-Do application built with Django REST Framework (backend) and React (frontend).  
-Features:
-- JWT Authentication (Login/Logout)
-- CRUD (Create, Read, Update, Delete) tasks
-- Filtering, Searching, Sorting
-- Pagination
-- CORS enabled
-- Local deployment on Windows
+## 🚀 Overview
+Ye ek simple Task Manager API hai jo Django REST Framework (DRF) se banayi gayi hai.  
+Isme user authentication (JWT) ke saath tasks create, read, update aur delete karne ki facility hai.  
 
-## 🛠 Tech Stack
-- Backend: Django, Django REST Framework
-- Frontend: React, Axios
-- Database: SQLite (local)
-- Auth: JWT (SimpleJWT)
+---
 
-## ⚡ Features
-- Add new tasks
-- Mark complete/incomplete
-- Delete tasks
-- Search & filter tasks
-- Pagination for large lists
-- User authentication with JWT
+## ⚙️ Features
+- User Registration & JWT Authentication
+- Create, Read, Update, Delete (CRUD) tasks
+- Task ownership (har user ke apne tasks)
+- Search tasks by title
+- API browsable interface (DRF)
 
-## 📂 Project Setup
-### Backend (Django)
+---
+
+## 📦 Installation
 bash
-cd backend
+git clone <repo-url>
+cd backend/database_integration
+python -m venv venv
+venv\Scripts\activate   # (Windows)
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+
 
